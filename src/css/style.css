@@ -1,0 +1,459 @@
+/* ===== ESTILO GERAL ===== */
+* {
+  padding: 0; /* Zera o padding padrão */
+  margin: 0; /* Zera a margem padrão */
+  box-sizing: border-box; /* Inclui o padding e a borda no tamanho total do elemento */
+  font-family: "Poppins", sans-serif; /* Define a fonte como Poppins */
+}
+
+html {
+  scroll-behavior: smooth; /* Faz a rolagem da página ser suave */
+}
+
+body {
+  background-color: rgb(0, 0, 0); /* Cor de fundo preta */
+  height: 100vh; /* Altura da tela inteira */
+  padding-top: 120px; /* Adiciona espaço acima do conteúdo para que não fique escondido pelo menu fixo */
+}
+
+.menu {
+  max-width: 1280px; /* Largura máxima do menu */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.flex {
+  display: flex; /* Ativa layout flexível */
+}
+
+h2.titulo {
+  color: white; /* Cor do texto branco */
+  font-size: 38px; /* Tamanho da fonte */
+  text-align: center; /* Alinha ao centro */
+}
+
+h2.titulo span {
+  color: rgb(0, 255, 234); /* Cor especial em parte do texto */
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  position: fixed; /* Torna o menu fixo no topo da tela */
+  top: 0; /* Alinha o menu no topo da tela */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Faz com que o menu ocupe toda a largura */
+  padding: 40px 4%; /* Espaçamento interno do cabeçalho */
+  background-color: rgb(0, 0, 0); /* Adiciona cor de fundo para garantir que o menu tenha fundo */
+  z-index: 1000; /* Garante que o menu ficará acima de outros elementos */
+  padding: 40px 4%; /* Espaçamento interno do cabeçalho */
+
+}
+
+header > #menu {
+  display: flex; /* Ativa layout flexível */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: space-between; /* Espaça os itens nas extremidades */
+}
+
+header a {
+  color: #7d7d7d; /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  display: inline-block; /* Permite manipular como bloco */
+  transition: 0.2s; /* Transição suave para hover */
+}
+
+header a:hover {
+  color: white; /* Muda cor ao passar o mouse */
+  transform: scale(1.05); /* Efeito de zoom leve */
+}
+
+header nav ul {
+  list-style-type: none; /* Remove marcadores da lista */
+}
+
+header nav ul li {
+  display: inline-block; /* Coloca os itens em linha */
+  padding: 0 40px; /* Espaçamento lateral entre os itens */
+}
+
+.btncontato button {
+  padding: 10px 40px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 600; /* Peso da fonte mais forte */
+  background-color: rgb(0, 255, 234); /* Cor do botão */
+  border: 0; /* Remove borda */
+  border-radius: 30px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostra mãozinha ao passar o mouse */
+  transition: 0.2s; /* Transição suave */
+}
+
+button:hover,
+form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px #ffffff; /* Adiciona uma sombra branca */
+  transform: scale(1.05); /* Efeito de zoom leve */
+}
+
+.logo img {
+  width: 80px; /* Largura da imagem da logo */
+}
+
+/* ===== TOPO DO SITE ===== */
+section#topo-do-site {
+  padding: 40px 4%; /* Espaçamento interno */
+}
+
+section#topo-do-site .flex {
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 90px; /* Espaçamento entre os elementos */
+}
+
+#topo-do-site .txt-topo-site h1 {
+  color: white; /* Cor do título */
+  font-size: 42px; /* Tamanho do título */
+  line-height: 45px; /* Espaçamento entre linhas */
+  white-space: pre-line; /* Mantém quebras de linha */
+}
+
+#topo-do-site .txt-topo-site p {
+  color: #ffff; /* Cor do parágrafo */
+  margin: 20px 0; /* Margem vertical */
+  white-space: pre-line; /* Mantém quebras de linha */
+}
+
+#topo-do-site .img-topo-site img {
+  position: relative; /* Necessário para animação */
+  animation: flutuar 2s ease-in-out infinite alternate; /* Aplica a animação flutuar */
+  width: 300px; /* Largura da imagem */
+  height: 300px; /* Altura da imagem */
+  border-radius: 50%; /* Deixa a imagem redonda */
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+  background: rgb(0, 255, 234); /* Fundo verde água */
+  text-align: center; /* Alinha o conteúdo ao centro */
+  padding: 7px; /* Espaçamento interno */
+  object-fit: cover; /* Garante que a imagem se encaixe bem */
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes flutuar {
+  0% {
+    top: 0; /* Posição inicial */
+  }
+  100% {
+    top: 30px; /* Desce 30px */
+  }
+}
+
+/* ===== ESPECIALIDADES ===== */
+section#especialidades {
+  padding: 40px 4%; /* Espaçamento interno */
+}
+
+section#especialidades .flex {
+  gap: 60px; /* Espaçamento entre os itens */
+}
+
+#especialidades .especialidades-box {
+  color: white; /* Cor do texto */
+  padding: 40px; /* Espaço interno */
+  margin-top: 45px; /* Espaço acima */
+  border-radius: 20px; /* Borda arredondada */
+  transition: 0.2s; /* Transição suave */
+}
+
+#especialidades .especialidades-box:hover {
+  transform: scale(1.05); /* Zoom ao passar o mouse */
+  box-shadow: 0px 0px 20px #ffffff77; /* Sombra ao redor */
+}
+
+#especialidades .especialidades-box i {
+  font-size: 70px; /* Tamanho do ícone */
+  color: rgb(0, 255, 234); /* Cor do ícone */
+}
+
+#especialidades .especialidades-box h3 {
+  font-size: 28px; /* Tamanho do título */
+  margin: 15px 0; /* Espaço vertical */
+}
+
+/* ===== SOBRE ===== */
+section#sobre {
+  padding: 80px 4%; /* Espaço interno */
+}
+
+section#sobre .flex {
+  align-items: center; /* Alinha verticalmente */
+  gap: 60px; /* Espaço entre os itens */
+}
+
+.imagem-sobre img {
+  width: 350px; /* Largura da imagem */
+  height: 450px; /* Altura da imagem */
+  border-radius: 10px; /* Borda arredondada */
+  text-align: center; /* Centraliza imagem */
+  object-fit: cover; /* Encaixa imagem corretamente */
+}
+
+#sobre .txt-sobre {
+  color: white; /* Cor do texto */
+}
+
+#sobre .txt-sobre h2 {
+  font-size: 40px; /* Tamanho da fonte */
+  line-height: 40px; /* Altura da linha */
+  margin-bottom: 30px; /* Espaço abaixo */
+}
+
+#sobre .txt-sobre h2 span {
+  color: rgb(0, 255, 234); /* Cor especial */
+  display: block; /* Faz o span virar bloco */
+}
+
+#sobre .txt-sobre p {
+  margin: 20px 0; /* Espaço entre parágrafos */
+  text-align: justify; /* Justifica o texto */
+}
+
+.btn-social button {
+  width: 60px; /* Largura do botão */
+  height: 60px; /* Altura do botão */
+  border-radius: 50%; /* Borda circular */
+  border: none; /* Remove borda */
+  background-color: rgb(0, 255, 234); /* Cor de fundo */
+  font-size: 22px; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor ao passar */
+  margin: 0 8px; /* Espaço lateral */
+  transition: 0.2s; /* Transição suave */
+}
+
+/* ===== PORTFÓLIO ===== */
+section#portfolio {
+  padding: 80px 4%; /* Espaço interno */
+  box-shadow: 0 0 40px 10px #ffffff1d; /* Sombra ao redor da seção */
+}
+
+.img-port {
+  width: 360px; /* Largura */
+  height: 460px; /* Altura */
+  background-color: rgb(0, 255, 234); /* Cor de fundo */
+  background-size: cover; /* Preenche o espaço */
+  background-position: 100% 0%; /* Posição inicial da imagem */
+  transition: 8s; /* Transição de posição */
+  border-radius: 40px; /* Borda arredondada */
+  cursor: pointer; /* Cursor de clique */
+  position: relative; /* Para overlay */
+  background-image: url(/src/assets/Untitled.jpg); /* Caminho da imagem */
+}
+
+.img-port:hover {
+  background-position: 100% 100%; /* Move o fundo ao passar o mouse */
+}
+
+.overlay {
+  position: absolute; /* Sobrepõe conteúdo */
+  top: 0; /* Começa do topo */
+  left: 0; /* Começa da esquerda */
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  background-color: #000000b8; /* Fundo escuro com transparência */
+  border-radius: 40px; /* Arredonda igual à imagem */
+  display: flex; /* Alinha conteúdo com flexbox */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+  font-size: 24px; /* Tamanho do texto */
+  font-weight: 600; /* Peso do texto */
+  color: white; /* Cor do texto */
+  opacity: 0; /* Começa invisível */
+  transition: 0.5s; /* Transição suave */
+}
+
+.overlay:hover {
+  opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+section#portfolio .flex {
+  justify-content: space-around; /* Espaça as imagens */
+  margin-top: 60px; /* Espaço superior */
+}
+
+/* ===== FORMULÁRIO ===== */
+section.formulario {
+  padding: 80px 4%; /* Espaço interno */
+}
+
+form {
+  max-width: 500px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza */
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza */
+  flex-direction: column; /* Em coluna */
+  gap: 10px; /* Espaço entre campos */
+  margin-top: 40px; /* Espaço superior */
+}
+
+form input,
+form textarea {
+  width: 100%; /* Ocupa toda a largura */
+  background-color: #242424; /* Fundo escuro */
+  border: 0; /* Remove borda */
+  outline: none; /* Remove contorno */
+  padding: 20px 15px; /* Espaçamento interno */
+  border-radius: 15px; /* Borda arredondada */
+  color: white; /* Cor do texto */
+  font-size: 18px; /* Tamanho do texto */
+}
+
+form textarea {
+  resize: none; /* Impede redimensionamento */
+  max-height: 200px; /* Altura máxima */
+}
+
+form .btn-enviar {
+  margin-top: 20px; /* Espaço superior */
+  text-align: center; /* Centraliza botão */
+}
+
+form .btn-enviar input {
+  width: 120px; /* Largura do botão */
+  background-color: rgb(0, 255, 234); /* Cor do botão */
+  color: black; /* Cor do texto */
+  font-weight: 700; /* Peso da fonte */
+  cursor: pointer; /* Cursor ao passar */
+  transition: 0.2s; /* Transição suave */
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  padding: 40px 4%; /* Espaço interno */
+  box-shadow: 0 0 40px 10px #ffffff1d; /* Sombra */
+}
+
+footer .flex {
+  justify-content: space-between; /* Espaça os elementos */
+}
+
+footer .line-footer {
+  padding: 20px 0; /* Espaço interno vertical */
+}
+
+.borda {
+  border-top: 2px solid rgb(0, 255, 234); /* Linha no topo */
+}
+
+footer .logo-footer img {
+  width: 80px; /* Largura da logo */
+}
+
+footer .line-footer p i {
+  color: rgb(0, 255, 234); /* Cor do ícone */
+  font-size: 22px; /* Tamanho do ícone */
+}
+
+footer .line-footer p a {
+  color: white; /* Cor do link */
+}
+
+footer .line-footer p {
+  color: white; /* Cor do texto */
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 927px) {
+  .flex {
+    flex-direction: column; /* Empilha os elementos */
+  }
+
+  .topo-do-site .flex {
+    flex-direction: column-reverse; /* Inverte a ordem */
+  }
+
+  h2.titulo {
+    font-size: 30px; /* Menor no mobile */
+    line-height: 34px; /* Espaço entre linhas menor */
+  }
+
+  .menu-desktop,
+  .btncontato {
+    display: none; /* Some com o menu */
+  }
+
+  section.topo-do-site .flex {
+    gap: 40px; /* Menor espaço */
+  }
+
+  section.topo-do-site {
+    padding: 20px 8%; /* Menor padding */
+  }
+
+  .topo-do-site .txt-topo-site h1 {
+    font-size: 30px; /* Fonte menor */
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%; /* Imagem cheia */
+  }
+
+  section#especialidades {
+    padding: 40px 8%; /* Reduz o padding lateral */
+  }
+
+  section#sobre {
+    padding: 80px 8%; /* Reduz o padding lateral */
+  }
+
+  #sobre .txt-sobre h2 {
+    font-size: 34px; /* Reduz tamanho do título */
+    line-height: 35px; /* Ajusta espaçamento */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  #sobre .txt-sobre p {
+    text-align: justify; /* Justifica o texto */
+  }
+
+  .btn-social {
+    text-align: center; /* Centraliza os botões sociais */
+  }
+
+  .imagem-sobre img {
+    width: 100%; /* Imagem ocupa toda a largura */
+    height: auto; /* Altura automática */
+  }
+
+  section#portfolio {
+    padding: 80px 8%; /* Reduz o padding lateral */
+  }
+
+  .img-port {
+    width: 100%; /* Imagem ocupa toda a largura */
+    max-width: 360px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+
+  section#portfolio .flex {
+    gap: 60px; /* Espaçamento entre imagens do portfólio */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    justify-content: center; /* Centraliza as imagens */
+  }
+
+  footer {
+    padding: 40px 8%; /* Reduz o padding lateral */
+  }
+
+  footer .flex {
+    gap: 30px; /* Espaço entre os itens do rodapé */
+    flex-direction: column; /* Empilha os elementos no mobile */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  footer .line-footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+  }
+
+  footer .logo-footer img {
+    width: 70px; /* Reduz tamanho da logo no rodapé */
+  }
+
+  footer .line-footer p {
+    font-size: 14px; /* Reduz tamanho do texto no rodapé */
+  }
+} 
