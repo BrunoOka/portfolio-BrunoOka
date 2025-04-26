@@ -241,7 +241,7 @@ section#portfolio {
   border-radius: 40px; /* Borda arredondada */
   cursor: pointer; /* Cursor de clique */
   position: relative; /* Para overlay */
-  background-image: url(/src/assets/Untitled.jpg); /* Caminho da imagem */
+  background-image: url(src/assets/Untitled.jpg); /* Caminho da imagem */
 }
 
 .img-port:hover {
